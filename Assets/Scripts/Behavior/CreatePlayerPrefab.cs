@@ -2,8 +2,7 @@
 
 public class CreatePlayerPrefab:MonoBehaviour
 {
-    public Character character;
-    public CameraController cameraController;
+    public CharacterLoader character;
 
     private void Awake()
     {
@@ -28,8 +27,7 @@ public class CreatePlayerPrefab:MonoBehaviour
             GameObject obj = Instantiate(prefab);
            // obj.transform.position = GameManager.Instance.PlayerList[0].transform.position;
             GameManager.Instance.AddPlayer(obj); //플레이어가 생성되어, 리스트에 추가
-            cameraController.SetTarget(obj);
         }
-
+        
     }
 }

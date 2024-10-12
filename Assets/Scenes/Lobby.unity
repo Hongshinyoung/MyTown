@@ -765,7 +765,6 @@ GameObject:
   - component: {fileID: 396124708}
   - component: {fileID: 396124710}
   - component: {fileID: 396124711}
-  - component: {fileID: 396124712}
   m_Layer: 5
   m_Name: Cat_Img
   m_TagString: Untagged
@@ -902,7 +901,7 @@ MonoBehaviour:
       - m_Target: {fileID: 396124711}
         m_TargetAssemblyTypeName: SelectCharacter, Assembly-CSharp
         m_MethodName: ReplaceImage
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -927,22 +926,6 @@ MonoBehaviour:
   - {fileID: 220345578}
   - {fileID: 133683790}
   selectedImage: {fileID: 1348060125}
-  btn: {fileID: 396124710}
-  character: {fileID: 396124712}
---- !u!114 &396124712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396124706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87d6e6dd72cbafb4098f5860fca202db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefabNames: []
-  playerIndex: 0
 --- !u!1 &686045889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1564,6 @@ GameObject:
   - component: {fileID: 1210513190}
   - component: {fileID: 1210513192}
   - component: {fileID: 1210513193}
-  - component: {fileID: 1210513194}
   m_Layer: 5
   m_Name: Human_Img
   m_TagString: Untagged
@@ -1718,11 +1700,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1210513193}
         m_TargetAssemblyTypeName: SelectCharacter, Assembly-CSharp
         m_MethodName: ReplaceImage
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -1743,22 +1725,6 @@ MonoBehaviour:
   - {fileID: 220345578}
   - {fileID: 133683790}
   selectedImage: {fileID: 1348060125}
-  btn: {fileID: 1210513192}
-  character: {fileID: 1210513194}
---- !u!114 &1210513194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210513188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87d6e6dd72cbafb4098f5860fca202db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefabNames: []
-  playerIndex: 1
 --- !u!1 &1238070553
 GameObject:
   m_ObjectHideFlags: 0

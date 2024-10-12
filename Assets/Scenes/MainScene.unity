@@ -1200,6 +1200,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1295,6 +1296,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   offsetZ: 10
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed059421e704d548a5c4564f282ba9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createPlayerPrefab: {fileID: 1225201831}
+  cameraController: {fileID: 519420033}
 --- !u!1 &529319838
 GameObject:
   m_ObjectHideFlags: 0
@@ -6383,7 +6398,6 @@ GameObject:
   - component: {fileID: 1222442026}
   - component: {fileID: 1222442025}
   - component: {fileID: 1222442024}
-  - component: {fileID: 1222442023}
   m_Layer: 5
   m_Name: Cat_Img
   m_TagString: Untagged
@@ -6411,20 +6425,6 @@ RectTransform:
   m_AnchoredPosition: {x: -120, y: 0}
   m_SizeDelta: {x: 160, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1222442023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222442021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87d6e6dd72cbafb4098f5860fca202db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefabNames: []
-  playerIndex: 0
 --- !u!114 &1222442024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6441,8 +6441,6 @@ MonoBehaviour:
   - {fileID: 1483058246}
   - {fileID: 405421988}
   selectedImage: {fileID: 0}
-  btn: {fileID: 1222442025}
-  character: {fileID: 1222442023}
 --- !u!114 &1222442025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6490,7 +6488,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1222442024}
         m_TargetAssemblyTypeName: SelectCharacter, Assembly-CSharp
         m_MethodName: ReplaceImage
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6514,6 +6512,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1225201831}
         m_TargetAssemblyTypeName: CreatePlayerPrefab, Assembly-CSharp
         m_MethodName: CreateCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420034}
+        m_TargetAssemblyTypeName: CameraTargetData, Assembly-CSharp
+        m_MethodName: SetTargetData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6607,7 +6617,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1225201832}
-  cameraController: {fileID: 519420033}
 --- !u!114 &1225201832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6623,7 +6632,6 @@ MonoBehaviour:
   characterPrefabNames:
   - Player0
   - Player1
-  playerIndex: 0
 --- !u!1 &1232797511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7511,7 +7519,6 @@ GameObject:
   - component: {fileID: 1855869987}
   - component: {fileID: 1855869986}
   - component: {fileID: 1855869985}
-  - component: {fileID: 1855869984}
   m_Layer: 5
   m_Name: Human_Img
   m_TagString: Untagged
@@ -7539,20 +7546,6 @@ RectTransform:
   m_AnchoredPosition: {x: 120, y: 0}
   m_SizeDelta: {x: 160, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1855869984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855869982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87d6e6dd72cbafb4098f5860fca202db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterPrefabNames: []
-  playerIndex: 1
 --- !u!114 &1855869985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7569,8 +7562,6 @@ MonoBehaviour:
   - {fileID: 1483058246}
   - {fileID: 405421988}
   selectedImage: {fileID: 0}
-  btn: {fileID: 1855869986}
-  character: {fileID: 1855869984}
 --- !u!114 &1855869986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7618,11 +7609,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1855869985}
         m_TargetAssemblyTypeName: SelectCharacter, Assembly-CSharp
         m_MethodName: ReplaceImage
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -7642,6 +7633,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1225201831}
         m_TargetAssemblyTypeName: CreatePlayerPrefab, Assembly-CSharp
         m_MethodName: CreateCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420034}
+        m_TargetAssemblyTypeName: CameraTargetData, Assembly-CSharp
+        m_MethodName: SetTargetData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

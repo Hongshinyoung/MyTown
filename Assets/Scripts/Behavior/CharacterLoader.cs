@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
-public class Character:MonoBehaviour
+public class CharacterLoader:MonoBehaviour
 {
     public string[] characterPrefabNames; //프리팹 이름
-    public int playerIndex;
 
 
     //캐릭터 프리팹 불러오기

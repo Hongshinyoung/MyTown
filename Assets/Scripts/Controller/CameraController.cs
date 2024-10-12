@@ -6,20 +6,16 @@ public class CameraController : MonoBehaviour
     public GameObject target;
     public float offsetZ = 10.0f;
 
-
-
     private void Awake()
     {
         camera = GetComponent<Camera>();
         camera = Camera.main;
-        
     }
 
     public void SetTarget(GameObject player)
     {
         target = player;
     }
-
 
     private void FixedUpdate()
     {
