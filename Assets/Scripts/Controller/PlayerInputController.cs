@@ -24,4 +24,9 @@ public class PlayerInputController:MyTownController
         lookInput = (worldPos - (Vector2)transform.position).normalized;
         CallLookEvent(lookInput);
     }
+
+    private void OnAttack(InputValue value)
+    {
+        isAttacking = value.isPressed;
+    }
 }

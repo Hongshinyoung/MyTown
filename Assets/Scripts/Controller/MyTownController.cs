@@ -9,6 +9,8 @@ public class MyTownController : MonoBehaviour
     public event Action<Vector2> OnLookEvent;
     public event Action OnAttackEvent;
 
+    protected bool isAttacking { get; set; }
+
     public void CallMoveEvent(Vector2 direction)
     {
         OnMoveEvent?.Invoke(direction);

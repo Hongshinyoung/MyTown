@@ -14,7 +14,6 @@ public class CameraTargetData : MonoBehaviour
     {
         
         GameObject target = GameManager.Instance.PlayerList[0]; //플레이어는 1명이니
-        Debug.Log("지금몇명"+GameManager.Instance.PlayerCount);
         if (target != null)
         {
             cameraController.SetTarget(target);
