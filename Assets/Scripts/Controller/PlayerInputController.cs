@@ -1,4 +1,5 @@
-﻿using Unity.Collections.LowLevel.Unsafe;
+﻿using System;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,8 +7,9 @@ public class PlayerInputController:MyTownController
 {
     Camera camera;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         camera = Camera.main;
     }
 
@@ -25,7 +27,7 @@ public class PlayerInputController:MyTownController
         CallLookEvent(lookInput);
     }
 
-    private void OnAttack(InputValue value)
+    private void OnFire(InputValue value)
     {
         isAttacking = value.isPressed;
     }

@@ -5,13 +5,14 @@ public class MyTownMovement: MonoBehaviour
     private MyTownController controller;
 
     private Rigidbody2D rigidbody;
-    private float speed = 5;
+    private CharacterStatHandler characterStatHandler;
     private Vector2 movementDirection = Vector2.zero;
 
     private void Awake()
     {
         controller = GetComponent<MyTownController>();
         rigidbody = GetComponent<Rigidbody2D>();
+        characterStatHandler = GetComponent<CharacterStatHandler>();
     }
 
     private void Start()
@@ -32,7 +33,7 @@ public class MyTownMovement: MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        rigidbody.velocity = movementDirection * speed;
+        rigidbody.velocity = movementDirection * characterStatHandler.CurrentStats.speed;
     }
 
 }

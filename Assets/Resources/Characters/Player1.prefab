@@ -212,7 +212,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 515687050, guid: b5737129cc0cf574bbe3c74941d565c9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_Size: {x: 7.47, y: 2.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5641539731626205059
@@ -239,6 +239,8 @@ GameObject:
   - component: {fileID: 242488365288788968}
   - component: {fileID: 6696475363783934495}
   - component: {fileID: 8559449418412534910}
+  - component: {fileID: -6121923054854557563}
+  - component: {fileID: 431426663785124784}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -415,3 +417,33 @@ MonoBehaviour:
   characterRenderer: {fileID: 6716299365504409998}
   weaponPivot: {fileID: 3799054295742143420}
   weaponRenderer: {fileID: 61756531053967465}
+--- !u!114 &-6121923054854557563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641539731626205059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e325adebbdd7f1141aefad88ecb208ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &431426663785124784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641539731626205059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd930761e5d12341b3976367021da0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    statChangeType: 2
+    maxHealth: 10
+    speed: 5
+    attackSO: {fileID: 11400000, guid: 59b2d5f07e7e1c541b53d459487cb3f1, type: 2}
+  statModifiers: []
